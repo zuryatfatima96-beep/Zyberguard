@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ZyberGuard — Personal Security Audit Toolkit</string>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>620</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainHorizontalLayout">
+    <property name="spacing"><number>0</number></property>
+    <property name="leftMargin"><number>0</number></property>
+    <property name="topMargin"><number>0</number></property>
+    <property name="rightMargin"><number>0</number></property>
+    <property name="bottomMargin"><number>0</number></property>
+
+    <!-- ==== SIDEBAR ==== -->
+    <item>
+     <widget class="QFrame" name="sidebarFrame">
+      <property name="minimumSize">
+       <size>
+        <width>230</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>230</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="spacing"><number>4</number></property>
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>16</number></property>
+
+       <item>
+        <widget class="QFrame" name="logoFrame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>90</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="logoLayout">
+          <property name="leftMargin"><number>20</number></property>
+          <property name="topMargin"><number>20</number></property>
+          <property name="rightMargin"><number>20</number></property>
+          <property name="bottomMargin"><number>10</number></property>
+          <item>
+           <widget class="QLabel" name="logoLabel">
+            <property name="text">
+             <string>🛡  ZyberGuard</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="taglineLabel">
+            <property name="text">
+             <string>Personal Security Audit Toolkit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnNavDashboard">
+         <property name="text">
+          <string>  📊   Dashboard</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavPortScan">
+         <property name="text">
+          <string>  🌐   Port Scanner</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavPassword">
+         <property name="text">
+          <string>  🔑   Password Check</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavFileIntegrity">
+         <property name="text">
+          <string>  📁   File Integrity</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavIpLookup">
+         <property name="text">
+          <string>  📍   IP Lookup</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavReport">
+         <property name="text">
+          <string>  📝   Security Report</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <spacer name="sidebarSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnThemeToggle">
+         <property name="text">
+          <string>☀  Light Mode</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="sidebarStatusLabel">
+         <property name="text">
+          <string>● Ready</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>28</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- ==== STACKED PAGES ==== -->
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+
+      <!-- ==== PAGE 0: DASHBOARD ==== -->
+      <widget class="QWidget" name="pageDashboard">
+       <layout class="QVBoxLayout" name="dashboardOuterLayout">
+        <property name="leftMargin"><number>32</number></property>
+        <property name="topMargin"><number>28</number></property>
+        <property name="rightMargin"><number>32</number></property>
+        <property name="bottomMargin"><number>28</number></property>
+        <property name="spacing"><number>18</number></property>
+        <item>
+         <widget class="QLabel" name="dashTitleLabel">
+          <property name="text">
+           <string>Security Dashboard</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="dashSubtitleLabel">
+          <property name="text">
+           <string>Overview of your last security audit results</string>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="dashCardsLayout">
+          <property name="spacing"><number>16</number></property>
+
+          <item>
+           <widget class="QFrame" name="cardPorts">
+            <layout class="QVBoxLayout" name="cardPortsLayout">
+             <item><widget class="QLabel" name="lblCardPortsIcon"><property name="text"><string>🌐</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardPortsTitle"><property name="text"><string>OPEN PORTS</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardPortsValue"><property name="text"><string>—</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+
+          <item>
+           <widget class="QFrame" name="cardPassword">
+            <layout class="QVBoxLayout" name="cardPasswordLayout">
+             <item><widget class="QLabel" name="lblCardPasswordIcon"><property name="text"><string>🔑</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardPasswordTitle"><property name="text"><string>PASSWORD</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardPasswordValue"><property name="text"><string>—</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+
+          <item>
+           <widget class="QFrame" name="cardFile">
+            <layout class="QVBoxLayout" name="cardFileLayout">
+             <item><widget class="QLabel" name="lblCardFileIcon"><property name="text"><string>📁</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardFileTitle"><property name="text"><string>FILE INTEGRITY</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardFileValue"><property name="text"><string>—</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+
+          <item>
+           <widget class="QFrame" name="cardIp">
+            <layout class="QVBoxLayout" name="cardIpLayout">
+             <item><widget class="QLabel" name="lblCardIpIcon"><property name="text"><string>📍</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardIpTitle"><property name="text"><string>IP LOOKUP</string></property></widget></item>
+             <item><widget class="QLabel" name="lblCardIpValue"><property name="text"><string>—</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+
+         </layout>
+        </item>
+
+        <item>
+         <widget class="QFrame" name="scoreFrame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>140</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="scoreCardLayout">
+           <property name="leftMargin"><number>28</number></property>
+           <property name="topMargin"><number>20</number></property>
+           <property name="rightMargin"><number>28</number></property>
+           <property name="bottomMargin"><number>20</number></property>
+           <item>
+            <layout class="QHBoxLayout" name="scoreHeaderLayout">
+             <item>
+              <widget class="QLabel" name="scoreTitleLabel">
+               <property name="text">
+                <string>Overall Security Score</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="scoreHeaderSpacer">
+               <property name="orientation"><enum>Qt::Horizontal</enum></property>
+               <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblSecurityScoreValue">
+               <property name="text">
+                <string>0%</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="pbSecurityScore">
+             <property name="minimum"><number>0</number></property>
+             <property name="maximum"><number>100</number></property>
+             <property name="value"><number>0</number></property>
+             <property name="textVisible"><bool>false</bool></property>
+             <property name="minimumSize"><size><width>0</width><height>14</height></size></property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QPushButton" name="btnDashGenerateReport">
+          <property name="text">
+           <string>Run Full Audit + Generate Report</string>
+          </property>
+          <property name="minimumSize">
+           <size><width>0</width><height>46</height></size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <spacer name="dashBottomSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- ==== PAGE 1: PORT SCANNER ==== -->
+      <widget class="QWidget" name="pagePortScan">
+       <layout class="QVBoxLayout" name="portScanOuterLayout">
+        <property name="leftMargin"><number>32</number></property>
+        <property name="topMargin"><number>28</number></property>
+        <property name="rightMargin"><number>32</number></property>
+        <property name="bottomMargin"><number>28</number></property>
+        <property name="spacing"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="psTitleLabel">
+          <property name="text"><string>Network Port Scanner</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="psSubtitleLabel">
+          <property name="text"><string>Scan a target host for open ports and flag risky services</string></property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QFrame" name="psControlsFrame">
+          <layout class="QHBoxLayout" name="psControlsLayout">
+           <property name="leftMargin"><number>18</number></property>
+           <property name="topMargin"><number>14</number></property>
+           <property name="rightMargin"><number>18</number></property>
+           <property name="bottomMargin"><number>14</number></property>
+           <property name="spacing"><number>10</number></property>
+           <item>
+            <widget class="QLabel" name="psTargetLabel">
+             <property name="text"><string>Target IP:</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="leTargetIp">
+             <property name="placeholderText"><string>127.0.0.1</string></property>
+             <property name="text"><string>127.0.0.1</string></property>
+             <property name="minimumSize"><size><width>150</width><height>34</height></size></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="psFromLabel">
+             <property name="text"><string>From:</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="sbPortStart">
+             <property name="minimum"><number>1</number></property>
+             <property name="maximum"><number>65535</number></property>
+             <property name="value"><number>1</number></property>
+             <property name="minimumSize"><size><width>80</width><height>34</height></size></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="psToLabel">
+             <property name="text"><string>To:</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="sbPortEnd">
+             <property name="minimum"><number>1</number></property>
+             <property name="maximum"><number>65535</number></property>
+             <property name="value"><number>1024</number></property>
+             <property name="minimumSize"><size><width>80</width><height>34</height></size></property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="psControlsSpacer">
+             <property name="orientation"><enum>Qt::Horizontal</enum></property>
+             <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnScanStart">
+             <property name="text"><string>▶  Start Scan</string></property>
+             <property name="minimumSize"><size><width>130</width><height>36</height></size></property>
+             <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QProgressBar" name="pbScanProgress">
+          <property name="minimum"><number>0</number></property>
+          <property name="maximum"><number>100</number></property>
+          <property name="value"><number>0</number></property>
+          <property name="minimumSize"><size><width>0</width><height>10</height></size></property>
+          <property name="textVisible"><bool>false</bool></property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QTableWidget" name="tblScanResults">
+          <column><property name="text"><string>Port</string></property></column>
+          <column><property name="text"><string>Service</string></property></column>
+          <column><property name="text"><string>Status</string></property></column>
+          <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+          <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+          <property name="alternatingRowColors"><bool>true</bool></property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QLabel" name="lblScanSummary">
+          <property name="text"><string>No scan performed yet.</string></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- ==== PAGE 2: PASSWORD CHECKER ==== -->
+      <widget class="QWidget" name="pagePassword">
+       <layout class="QVBoxLayout" name="pwOuterLayout">
+        <property name="leftMargin"><number>32</number></property>
+        <property name="topMargin"><number>28</number></property>
+        <property name="rightMargin"><number>32</number></property>
+        <property name="bottomMargin"><number>28</number></property>
+        <property name="spacing"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="pwTitleLabel">
+          <property name="text"><string>Password Strength Checker</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="pwSubtitleLabel">
+          <property name="text"><string>Check password strength and view its SHA-256 hash</string></property>
+         </widget>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="pwInputLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <widget class="QLineEdit" name="lePassword">
+            <property name="echoMode"><enum>QLineEdit::Password</enum></property>
+            <property name="placeholderText"><string>Type a password to analyze...</string></property>
+            <property name="minimumSize"><size><width>0</width><height>40</height></size></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnTogglePassword">
+            <property name="text"><string>👁</string></property>
+            <property name="checkable"><bool>true</bool></property>
+            <property name="minimumSize"><size><width>40</width><height>40</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnCheckPassword">
+            <property name="text"><string>Analyze</string></property>
+            <property name="minimumSize"><size><width>120</width><height>40</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <widget class="QFrame" name="pwResultFrame">
+          <layout class="QVBoxLayout" name="pwResultLayout">
+           <property name="leftMargin"><number>18</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>18</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+           <property name="spacing"><number>10</number></property>
+           <item>
+            <layout class="QHBoxLayout" name="pwRatingLayout">
+             <item>
+              <widget class="QLabel" name="pwStrengthLabel">
+               <property name="text"><string>Strength:</string></property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblPasswordRating">
+               <property name="text"><string>—</string></property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="pwRatingSpacer">
+               <property name="orientation"><enum>Qt::Horizontal</enum></property>
+               <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="pbPasswordStrength">
+             <property name="minimum"><number>0</number></property>
+             <property name="maximum"><number>4</number></property>
+             <property name="value"><number>0</number></property>
+             <property name="textVisible"><bool>false</bool></property>
+             <property name="minimumSize"><size><width>0</width><height>12</height></size></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="listPasswordCriteria">
+             <property name="minimumSize"><size><width>0</width><height>120</height></size></property>
+             <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="pwHashLayout">
+             <item>
+              <widget class="QLabel" name="pwHashTagLabel">
+               <property name="text"><string>SHA-256:</string></property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lePasswordHash">
+               <property name="readOnly"><bool>true</bool></property>
+               <property name="placeholderText"><string>—</string></property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <spacer name="pwBottomSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- ==== PAGE 3: FILE INTEGRITY ==== -->
+      <widget class="QWidget" name="pageFileIntegrity">
+       <layout class="QVBoxLayout" name="fiOuterLayout">
+        <property name="leftMargin"><number>32</number></property>
+        <property name="topMargin"><number>28</number></property>
+        <property name="rightMargin"><number>32</number></property>
+        <property name="bottomMargin"><number>28</number></property>
+        <property name="spacing"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="fiTitleLabel">
+          <property name="text"><string>File Integrity Checker</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="fiSubtitleLabel">
+          <property name="text"><string>Save a baseline hash for a file, then verify it later for tampering</string></property>
+         </widget>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="fiInputLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <widget class="QLineEdit" name="leFilePath">
+            <property name="readOnly"><bool>true</bool></property>
+            <property name="placeholderText"><string>No file selected...</string></property>
+            <property name="minimumSize"><size><width>0</width><height>40</height></size></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBrowseFile">
+            <property name="text"><string>Browse…</string></property>
+            <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="fiButtonsLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <widget class="QPushButton" name="btnSaveHash">
+            <property name="text"><string>💾  Save Baseline Hash</string></property>
+            <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnVerifyFile">
+            <property name="text"><string>🔍  Verify File</string></property>
+            <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <widget class="QLabel" name="lblFileStatus">
+          <property name="text"><string>Select a file to begin.</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+          <property name="minimumSize"><size><width>0</width><height>50</height></size></property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QLabel" name="fiSavedLabel">
+          <property name="text"><string>Saved Baseline Hashes</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tblSavedHashes">
+          <column><property name="text"><string>File Path</string></property></column>
+          <column><property name="text"><string>SHA-256 Hash</string></property></column>
+          <column><property name="text"><string>Saved On</string></property></column>
+          <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+          <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+          <property name="alternatingRowColors"><bool>true</bool></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- ==== PAGE 4: IP LOOKUP ==== -->
+      <widget class="QWidget" name="pageIpLookup">
+       <layout class="QVBoxLayout" name="ipOuterLayout">
+        <property name="leftMargin"><number>32</number></property>
+        <property name="topMargin"><number>28</number></property>
+        <property name="rightMargin"><number>32</number></property>
+        <property name="bottomMargin"><number>28</number></property>
+        <property name="spacing"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="ipTitleLabel">
+          <property name="text"><string>IP Address Lookup</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="ipSubtitleLabel">
+          <property name="text"><string>Investigate a suspicious IP address using geolocation data</string></property>
+         </widget>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="ipInputLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <widget class="QLineEdit" name="leIpAddress">
+            <property name="placeholderText"><string>e.g. 8.8.8.8</string></property>
+            <property name="minimumSize"><size><width>0</width><height>40</height></size></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLookupIp">
+            <property name="text"><string>🔎  Lookup</string></property>
+            <property name="minimumSize"><size><width>120</width><height>40</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <widget class="QProgressBar" name="pbIpLoading">
+          <property name="minimum"><number>0</number></property>
+          <property name="maximum"><number>0</number></property>
+          <property name="visible"><bool>false</bool></property>
+          <property name="textVisible"><bool>false</bool></property>
+          <property name="minimumSize"><size><width>0</width><height>8</height></size></property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QFrame" name="ipResultFrame">
+          <layout class="QFormLayout" name="ipResultLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>18</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>18</number></property>
+           <property name="horizontalSpacing"><number>14</number></property>
+           <property name="verticalSpacing"><number>12</number></property>
+           <item row="0" column="0"><widget class="QLabel" name="ipTagCountry"><property name="text"><string>Country</string></property></widget></item>
+           <item row="0" column="1"><widget class="QLabel" name="lblIpCountry"><property name="text"><string>—</string></property></widget></item>
+           <item row="1" column="0"><widget class="QLabel" name="ipTagCity"><property name="text"><string>City</string></property></widget></item>
+           <item row="1" column="1"><widget class="QLabel" name="lblIpCity"><property name="text"><string>—</string></property></widget></item>
+           <item row="2" column="0"><widget class="QLabel" name="ipTagRegion"><property name="text"><string>Region</string></property></widget></item>
+           <item row="2" column="1"><widget class="QLabel" name="lblIpRegion"><property name="text"><string>—</string></property></widget></item>
+           <item row="3" column="0"><widget class="QLabel" name="ipTagTimezone"><property name="text"><string>Timezone</string></property></widget></item>
+           <item row="3" column="1"><widget class="QLabel" name="lblIpTimezone"><property name="text"><string>—</string></property></widget></item>
+           <item row="4" column="0"><widget class="QLabel" name="ipTagIsp"><property name="text"><string>ISP</string></property></widget></item>
+           <item row="4" column="1"><widget class="QLabel" name="lblIpIsp"><property name="text"><string>—</string></property></widget></item>
+           <item row="5" column="0"><widget class="QLabel" name="ipTagCoords"><property name="text"><string>Coordinates</string></property></widget></item>
+           <item row="5" column="1"><widget class="QLabel" name="lblIpCoords"><property name="text"><string>—</string></property></widget></item>
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <spacer name="ipBottomSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- ==== PAGE 5: REPORT ==== -->
+      <widget class="QWidget" name="pageReport">
+       <layout class="QVBoxLayout" name="reportOuterLayout">
+        <property name="leftMargin"><number>32</number></property>
+        <property name="topMargin"><number>28</number></property>
+        <property name="rightMargin"><number>32</number></property>
+        <property name="bottomMargin"><number>28</number></property>
+        <property name="spacing"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="repTitleLabel">
+          <property name="text"><string>Security Report</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="repSubtitleLabel">
+          <property name="text"><string>Combined results from all completed modules</string></property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QTextEdit" name="txtReportPreview">
+          <property name="readOnly"><bool>true</bool></property>
+          <property name="placeholderText"><string>Run checks from the other tabs, then click "Generate Report".</string></property>
+         </widget>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="repButtonsLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <widget class="QPushButton" name="btnGenerateReport">
+            <property name="text"><string>⟳  Generate Report</string></property>
+            <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSaveReport">
+            <property name="text"><string>💾  Save As…</string></property>
+            <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
